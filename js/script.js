@@ -27,6 +27,9 @@ console.log(hours);
 // Déplacer les aiguilles 
 function demarrerLaMontre() {
     console.log("corriger l'affichage des aiguilles");
+    AIGUILLESEC.style.transform = `rotate(${seconds*6}deg)`
+    AIGUILLEMIN.style.transform = `rotate(${minutes*6}deg)`
+    AIGUILLEHR.style.transform = `rotate(${hours*30}deg)`
     secondUp();
 }
 
