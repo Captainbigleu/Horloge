@@ -60,6 +60,6 @@
 #hour,
 #minute,
 #second {
-    transform-origin: 300px 300px;
-    transition: transform .5s ease-in-out;
+    transform-origin: center;
+    transition: transform 0 ease-in-out;
 }
