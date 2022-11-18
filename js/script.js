@@ -27,7 +27,13 @@ function degsSeconds(){
 
 // Déplacer les aiguilles 
 function demarrerLaMontre() {
+console.log("corriger l'affichage des aiguilles");
+secondUp();
+}
 
+function secondUp(){
+    seconds++
+    console.log(`maintenant les secondes sont de ${seconds}`)
 }
 
 // Exercuter la fonction chaque second
