@@ -20,9 +20,8 @@ console.log(hours);
 // Calculer de degré de mouvement de l'aiguille heure, de l'aiguille minute, de l'aiguille seconde
 // Hint : Tous les aiguilles doivent se déplacer chaque second selon un degré
 
-function degsSeconds(){
-    
-}
+/* heures: angle=30° ;  minutes: angle= 6° ; secondes : angle = 6)
+*/
 
 
 // Déplacer les aiguilles 
