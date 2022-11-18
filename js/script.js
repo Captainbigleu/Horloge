@@ -8,25 +8,49 @@ const start = new Date();
 console.log(start);
 
 //Stocker l'heure , minute , seconde  dans des varaiables
-let seconds= start.getSeconds();
+let seconds = start.getSeconds();
 console.log(seconds);
 
-let minutes= start.getMinutes();
+let minutes = start.getMinutes();
 console.log(minutes);
 
-let hours= start.getHours();
+let hours = start.getHours();
 console.log(hours);
 
 // Calculer de degré de mouvement de l'aiguille heure, de l'aiguille minute, de l'aiguille seconde
 // Hint : Tous les aiguilles doivent se déplacer chaque second selon un degré
 
-function degsSeconds(){
-    
-}
+/* heures: angle=30° ;  minutes: angle= 6° ; secondes : angle = 6)
+*/
 
 
 // Déplacer les aiguilles 
 function demarrerLaMontre() {
+    console.log("corriger l'affichage des aiguilles");
+    secondUp();
+}
+
+function secondUp() {
+    seconds++;
+    console.log(`maintenant les secondes sont de ${seconds}`);
+    if (seconds == 60) {
+        console.log(`secondes à zero et on incrémente les minutes`);
+        seconds = 0;
+        minuteUp();
+    } else {
+        console.log("continue d'incrementer");
+    }
+}
+
+function minuteUp() {
+    minutes++;
+    console.log(`maintenant les minutes sont de ${minutes}`)
+    if (minutes == 60){
+        console.log("minutes = 0");
+        minutes = 0;
+    } else {
+        console.log("continue d'incrémenter");
+    }
 
 }
 
