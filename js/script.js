@@ -32,7 +32,12 @@ secondUp();
 
 function secondUp(){
     seconds++
-    console.log(`maintenant les secondes sont de ${seconds}`)
+    console.log(`maintenant les secondes sont de ${seconds}`);
+    if(seconds==60){
+        console.log("seconds=0" );
+    }else {
+        console.log("continue d'incrementer");
+    }
 }
 
 // Exercuter la fonction chaque second
