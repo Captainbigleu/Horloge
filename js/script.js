@@ -48,6 +48,7 @@ function minuteUp() {
     if (minutes == 60){
         console.log("minutes = 0");
         minutes = 0;
+        heureUp();
     } else {
         console.log("continue d'incrémenter");
     }
