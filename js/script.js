@@ -54,5 +54,16 @@ function minuteUp() {
 
 }
 
+function heureUp(){
+    heures++;
+    console.log(`maintenant les heures sont de ${heures}`)
+    if (heures == 12){
+        console.log("heures = 0");
+        heures = 0;
+    } else {
+        console.log("continue d'incrémenter");
+    }
+}
+
 // Exercuter la fonction chaque second
 var interval = setInterval(demarrerLaMontre, 1000);
