@@ -17,7 +17,7 @@ const AIGUILLESEC = document.querySelector("#second");
 // Déplacer les aiguilles 
 function demarrerLaMontre() {
 
-
+// TEST TEST TEST
 
 }
 // Exercuter la fonction chaque second
