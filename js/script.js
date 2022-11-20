@@ -21,12 +21,12 @@ console.log(hours);
 // Hint : Tous les aiguilles doivent se déplacer chaque second selon un degré
 
 // Pour les heures: il faut un angle de 30 ° et qu'en même temps les minutes fassent un tour de (360° / 60)/12.
-let angHours = (hours * 360 /12) + (minutes * 6 /12);
+const angHours = (hours * 360 /12) + (minutes * 6 /12);
 
 //Pour les minutes  : il faut un angle de 6° et qu'en' même temps les secondes fassent un tour de (360° / 60)/60
-let angMinutes = (minutes * 6) + (seconds * 6 / 60);
+const angMinutes = (minutes * 6) + (seconds * 6 / 60);
 
-let angSeconds = seconds * 6;
+const angSeconds = seconds * 6;
 
 
 // Déplacer les aiguilles 
@@ -40,9 +40,9 @@ function demarrerLaMontre() {
     /** 6/360 et la valeur de l'angle que fait l'aiguille des minutes pendant le déplacement de l'aiguille des secondes pendant 60s*/
     angSeconds = angSeconds + 6;
 
-        console.log(`La valeur de l'angle des heure est de ${angHours}`);
-        console.log(`La valeur de l'angle des heure est de ${angMinutes}`);
-        console.log(`La valeur de l'angle des heure est de ${angSeconds}`);
+        console.log(`La valeur de l'angle des heures est de ${angHours}`);
+        console.log(`La valeur de l'angle des minutes est de ${angMinutes}`);
+        console.log(`La valeur de l'angle des secondes est de ${angSeconds}`);
 
     AIGUILLESEC.style.transform = `rotate(${angSeconds}deg)`;
     AIGUILLEMIN.style.transform = `rotate(${angMinutes}deg)`;
