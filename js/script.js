@@ -20,16 +20,34 @@ console.log(hours);
 // Calculer de degré de mouvement de l'aiguille heure, de l'aiguille minute, de l'aiguille seconde
 // Hint : Tous les aiguilles doivent se déplacer chaque second selon un degré
 
-/* heures: angle=30° ;  minutes: angle= 6° ; secondes : angle = 6)
-*/
+// Pour les heures: il faut un angle de 30 ° et qu'en même temps les minutes fassent un tour de (360° / 60)/12.
+let angHours = (hours * 360 /12) + (minutes * 6 /12);
+
+//Pour les minutes  : il faut un angle de 6° et qu'en' même temps les secondes fassent un tour de (360° / 60)/60
+let angMinutes = (minutes * 6) + (seconds * 6 / 60);
+
+let angSeconds = seconds * 6;
 
 
 // Déplacer les aiguilles 
 function demarrerLaMontre() {
-    console.log("corriger l'affichage des aiguilles");
-    AIGUILLESEC.style.transform = `rotate(${seconds*6}deg)`
-    AIGUILLEMIN.style.transform = `rotate(${minutes*6}deg)`
-    AIGUILLEHR.style.transform = `rotate(${hours*30}deg)`
+    
+    /** 3/360 et la valeur de l'angle que fait l'aiguille des heures pendant le déplacement de l'aiguille des secondes pendant 3600s 
+    et des minutes pendant 60 minutes*/
+    angHours = angHours + (3/360);
+
+    angMinutes = angMinutes + (6/60); 
+    /** 6/360 et la valeur de l'angle que fait l'aiguille des minutes pendant le déplacement de l'aiguille des secondes pendant 60s*/
+    angSeconds = angSeconds + 6;
+
+        console.log(`La valeur de l'angle des heure est de ${angHours}`);
+        console.log(`La valeur de l'angle des heure est de ${angMinutes}`);
+        console.log(`La valeur de l'angle des heure est de ${angSeconds}`);
+
+    AIGUILLESEC.style.transform = `rotate(${angSeconds}deg)`;
+    AIGUILLEMIN.style.transform = `rotate(${angMinutes}deg)`;
+    AIGUILLEHR.style.transform = `rotate(${angHours}deg)`;
+
     secondUp();
 }
 
@@ -40,6 +58,7 @@ function secondUp() {
         console.log(`secondes à zero et on incrémente les minutes`);
         seconds = 0;
         minuteUp();
+        
     } else {
         console.log("continue d'incrementer");
     }
