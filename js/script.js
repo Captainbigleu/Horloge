@@ -21,12 +21,12 @@ console.log(hours);
 // Hint : Tous les aiguilles doivent se déplacer chaque second selon un degré
 
 // Pour les heures: il faut un angle de 30 ° et qu'en même temps les minutes fassent un tour de (360° / 60)/12.
-const angHours = (hours * 360 /12) + (minutes * 6 /12);
+let angHours = (hours * 360 /12) + (minutes * 6 /12);
 
 //Pour les minutes  : il faut un angle de 6° et qu'en' même temps les secondes fassent un tour de (360° / 60)/60
-const angMinutes = (minutes * 6) + (seconds * 6 / 60);
+let angMinutes = (minutes * 6) + (seconds * 6 / 60);
 
-const angSeconds = seconds * 6;
+let angSeconds = seconds * 6;
 
 
 // Déplacer les aiguilles 
