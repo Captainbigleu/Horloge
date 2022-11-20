@@ -61,5 +61,5 @@
 #minute,
 #second {
     transform-origin: center;
-    transition: transform 0 ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
